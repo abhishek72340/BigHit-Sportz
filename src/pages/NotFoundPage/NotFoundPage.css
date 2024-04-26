@@ -1,0 +1,16 @@
+.page_not_found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-weight: bold;
+    color: red;
+    gap:1rem;
+}
+.error-code{
+    font-size: 5rem;
+}
+.error-message{
+    font-size: 1rem;
+}
