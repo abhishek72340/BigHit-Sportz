@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import { useCart } from "../../Hooks/useCart";
+import { useNavigate } from "./../../Hooks/useNavigate";
 import { MdFavoriteBorder } from "react-icons/md";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -12,7 +13,8 @@ const StyledBadge = styled(Badge)(() => ({
 }));
 
 const Navbar = () => {
-  const { search, setSearch } = useCart();
+  const { search, setSearch, isCart } = useCart();
+  const navigate = useNavigate();
   return (
     <>
       <nav>
@@ -30,8 +32,11 @@ const Navbar = () => {
           placeholder="Search Products or store"
         />
         <div className="icon_container">
-          <div className="cart-icon">
-            <StyledBadge badgeContent={"0"} color="primary">
+          <div className="cart-icon" onClick={() => navigate("/cart")}>
+            <StyledBadge
+              badgeContent={isCart.length > 0 ? isCart.length : "0"}
+              color="primary"
+            >
               <ShoppingCartIcon sx={{ color: "white" }} id="badge-cart" />
             </StyledBadge>
           </div>
