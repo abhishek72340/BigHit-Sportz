@@ -14,7 +14,7 @@ const StyledBadge = styled(Badge)(() => ({
 }));
 
 const Navbar = () => {
-  const { search, setSearch, isCart } = useCart();
+  const { search, setSearch, isCart, isWishlist } = useCart();
   const navigate = useNavigate();
   return (
     <>
@@ -39,10 +39,15 @@ const Navbar = () => {
               <ShoppingCartIcon sx={{ color: "white" }} id="badge-cart" />
             </StyledBadge>
           </div>
-          <MdFavoriteBorder
-            id="favorite_icon"
-            onClick={() => navigate("/wishlist")}
-          />
+          <div className="fav_badge_icon">
+            <div id="fav_badge">
+              {isWishlist.length > 0 ? isWishlist.length : "0"}
+            </div>
+            <MdFavoriteBorder
+              id="favorite_icon"
+              onClick={() => navigate("/wishlist")}
+            />
+          </div>
         </div>
       </nav>
     </>

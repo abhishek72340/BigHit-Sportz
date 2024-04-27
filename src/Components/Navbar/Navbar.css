@@ -46,6 +46,24 @@ nav h2 {
   margin-top: 4px;
   cursor: pointer;
 }
+.fav_badge_icon{
+  position: relative;
+}
+#fav_badge{
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  font-size: 12px;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: #f9b023;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 .cart-icon {
   color: #fff;
   font-size: 1.5rem;
@@ -75,9 +93,6 @@ nav h2 {
     font-size: 2.5rem;
   }
 
-  #favorite_icon {
-    display: none;
-  }
 }
 @media screen and (min-width: 401px) and (max-width: 600px) {
   #search_input {
@@ -98,9 +113,9 @@ nav h2 {
   .cart-icon :nth-child(1) {
     font-size: 2.5rem;
   }
-
-  #favorite_icon {
+  .fav_badge_icon{
     display: none;
   }
+ 
  
 }

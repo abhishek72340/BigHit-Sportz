@@ -14,11 +14,35 @@ const ProductCard = () => {
     );
   return (
     <>
+      {/* <p
+        style={{
+          padding: "1.5rem 0 0 2rem",
+          fontSize: "2.3rem",
+          opacity: "0.7",
+        }}
+      >
+        Recommended
+      </p> */}
+
       <div className="products_container">
         {filterProduct &&
           filterProduct?.slice(0, 20)?.map((product) => {
             return (
               <div key={product?.id} className="product_img_container">
+                <div className="fav_icon">
+                  {isWishlist &&
+                  isWishlist?.find((item) => item.id === product.id) ? (
+                    <MdFavorite
+                      onClick={() => navigate("/wishlist")}
+                      style={{ cursor: "pointer", color: "#ff5555" }}
+                    />
+                  ) : (
+                    <MdFavoriteBorder
+                      className="add_fav_icon"
+                      onClick={() => addToWishlist(product?.id)}
+                    />
+                  )}
+                </div>
                 <img
                   src={product?.thumbnail}
                   alt="product"
@@ -31,7 +55,7 @@ const ProductCard = () => {
                     <p className="product_title">{product?.title}</p>
                   </div>
                   <div className="icons_container">
-                    {isWishlist &&
+                    {/* {isWishlist &&
                     isWishlist?.find((item) => item.id === product.id) ? (
                       <MdFavorite
                         onClick={() => navigate("/wishlist")}
@@ -42,7 +66,7 @@ const ProductCard = () => {
                         className="add_fav_icon"
                         onClick={() => addToWishlist(product?.id)}
                       />
-                    )}
+                    )} */}
                     <AiFillPlusCircle
                       className="add_cart_btn"
                       onClick={() => addToCart(product?.id)}
