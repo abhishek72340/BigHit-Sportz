@@ -14,16 +14,6 @@ const ProductCard = () => {
     );
   return (
     <>
-      {/* <p
-        style={{
-          padding: "1.5rem 0 0 2rem",
-          fontSize: "2.3rem",
-          opacity: "0.7",
-        }}
-      >
-        Recommended
-      </p> */}
-
       <div className="products_container">
         {filterProduct &&
           filterProduct?.slice(0, 20)?.map((product) => {

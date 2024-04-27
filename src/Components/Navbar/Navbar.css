@@ -12,7 +12,7 @@ nav h2 {
 #search_input {
   background-color: #153075;
   border: 1px solid #153075;
-  width: 30%;
+  width: 40%;
   padding: 1rem;
   border-radius: 30px;
   outline: none;
@@ -46,34 +46,46 @@ nav h2 {
   margin-top: 4px;
   cursor: pointer;
 }
-.fav_badge_icon{
+.fav_badge_icon {
   position: relative;
 }
-#fav_badge{
+#fav_badge {
   position: absolute;
   top: -5px;
   right: -10px;
   font-size: 12px;
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 1.2rem;
+  height: 1.2rem;
   background-color: #f9b023;
   color: white;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-.cart-icon {
-  color: #fff;
-  font-size: 1.5rem;
+.cart_badge_icon {
+  position: relative;
   cursor: pointer;
 }
-.delivery_time_container {
-  display: none;
+.cart_badge_icon img {
+  width: 1.2rem;
+}
+#cart_badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  font-size: 12px;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #f9b023;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 300px) {
   #search_input {
     margin: 6rem 0 1px 0;
     width: calc(100% - 2rem);
@@ -84,15 +96,55 @@ nav h2 {
     top: 1rem;
     font-size: 2.5rem;
   }
-  .cart-icon {
+  .cart_badge_icon {
     position: absolute;
     right: 3rem;
     top: 2rem;
   }
-  .cart-icon :nth-child(1) {
+  .cart_badge_icon img {
+    width: 2rem;
+  }
+  #cart_badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-size: 12px;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #f9b023;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fav_badge_icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 301px) and (max-width: 400px) {
+  #search_input {
+    margin: 6rem 0 1px 0;
+    width: calc(100% - 2rem);
+  }
+  nav h2 {
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
     font-size: 2.5rem;
   }
+  .cart_badge_icon {
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+  }
+  .cart_badge_icon img {
+    width: 1.5rem;
+  }
 
+  .fav_badge_icon {
+    display: none;
+  }
 }
 @media screen and (min-width: 401px) and (max-width: 600px) {
   #search_input {
@@ -105,17 +157,29 @@ nav h2 {
     top: 1rem;
     font-size: 2.5rem;
   }
-  .cart-icon {
+  .cart_badge_icon {
     position: absolute;
     right: 3rem;
     top: 2rem;
   }
-  .cart-icon :nth-child(1) {
-    font-size: 2.5rem;
+  .cart_badge_icon img {
+    width: 1.7rem;
   }
-  .fav_badge_icon{
+  #cart_badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-size: 12px;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: #f9b023;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fav_badge_icon {
     display: none;
   }
- 
- 
 }

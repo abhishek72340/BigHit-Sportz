@@ -3,15 +3,6 @@ import { useCart } from "../../Hooks/useCart";
 import { useNavigate } from "./../../Hooks/useNavigate";
 import { MdFavoriteBorder } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
-import Badge from "@mui/material/Badge";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { styled } from "@mui/material/styles";
-const StyledBadge = styled(Badge)(() => ({
-  "& .MuiBadge-badge": {
-    backgroundColor: "#f9b023",
-    color: "white",
-  },
-}));
 
 const Navbar = () => {
   const { search, setSearch, isCart, isWishlist } = useCart();
@@ -31,13 +22,9 @@ const Navbar = () => {
         </div>
 
         <div className="icon_container">
-          <div className="cart-icon" onClick={() => navigate("/cart")}>
-            <StyledBadge
-              badgeContent={isCart.length > 0 ? isCart.length : "0"}
-              color="primary"
-            >
-              <ShoppingCartIcon sx={{ color: "white" }} id="badge-cart" />
-            </StyledBadge>
+          <div className="cart_badge_icon" onClick={() => navigate("/cart")}>
+            <div id="cart_badge">{isCart.length > 0 ? isCart.length : "0"}</div>
+            <img src="/bag.png" alt="cart" />
           </div>
           <div className="fav_badge_icon">
             <div id="fav_badge">
