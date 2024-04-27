@@ -21,14 +21,16 @@ nav h2 {
   align-items: center;
   gap: 10px;
 }
+
 ::-webkit-input-placeholder {
   color: #5e6e98;
+  
 }
 #search_input input {
   background-color: #153075;
   border: 1px solid #153075;
   width: 80%;
-  border-radius: 30px;
+   border-radius: 30px;
   outline: none;
   color: #fff;
   z-index: 1;
