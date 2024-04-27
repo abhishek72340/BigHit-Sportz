@@ -1,0 +1,122 @@
+.product_details_header_text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  .product_details_header_text :nth-child(2) {
+    font-weight: 700;
+  }
+  .product_details_name_price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #2f4fa2;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  .product_details_name_price :nth-child(1) {
+    font-weight: 600;
+  }
+  .product-details-add_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .product-details-add_btn :nth-child(1) {
+    color: #2f4fa2;
+    border: 1px solid #2f4fa2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 10%;
+    cursor: pointer;
+  }
+  .product-details-add_btn :nth-child(2) {
+    color: white;
+    border: 1px solid #2f4fa2;
+    background-color: #2f4fa2;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 10%;
+    cursor: pointer;
+  }
+  .product_details-description {
+    padding: 1rem;
+    margin-top: 3rem;
+    display: flex;
+  
+    flex-direction: column;
+    gap: 10px;
+  }
+  .details_heading {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .products_detail_description {
+    word-spacing: 3px;
+    color: gray;
+  }
+  .price_discount_container{
+      display: flex;
+      align-items: center;
+      gap:1rem;
+  }
+  .discount_price{
+      color:white;
+      background-color:#2f4fa2 ;
+      padding: 8px;
+      font-size: 10px;
+      border-radius: 15px;
+  
+  }
+  
+  .star_rating{
+      padding: 1rem;
+  }
+  @media screen and (max-width: 300px) {
+   
+    .product-details-add_btn :nth-child(1) {
+      width: 35%;
+  
+      font-size: 8px;
+    }
+    .product-details-add_btn :nth-child(2) {
+      width: 35%;
+  
+      font-size: 8px;
+    }
+  }
+  @media screen and (min-width: 301px) and (max-width: 600px) {
+   
+    .product-details-add_btn :nth-child(1) {
+      width: 30%;
+  
+      font-size: 11px;
+    }
+    .product-details-add_btn :nth-child(2) {
+      width: 30%;
+  
+      font-size: 11px;
+    }
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 768px) {
+    .product-details-add_btn :nth-child(1) {
+      width: 20%;
+    }
+    .product-details-add_btn :nth-child(2) {
+      width: 20%;
+    }
+  }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .product-details-add_btn :nth-child(1) {
+      width: 20%;
+    }
+    .product-details-add_btn :nth-child(2) {
+      width: 20%;
+    }
+  }
+  

@@ -2,6 +2,7 @@ import "./Navbar.css";
 import { useCart } from "../../Hooks/useCart";
 import { useNavigate } from "./../../Hooks/useNavigate";
 import { MdFavoriteBorder } from "react-icons/md";
+import { CiSearch } from "react-icons/ci";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { styled } from "@mui/material/styles";
@@ -18,19 +19,17 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <img
-          src="https://www.bighit.fans/assets/images/Group7263.png"
-          alt="logo"
-          width="80px"
-          id="logo"
-        />
-        <input
-          type="text"
-          id="search_input"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search Products or store"
-        />
+        <h2>Hello 👋</h2>
+        <div id="search_input">
+          <CiSearch id="search_icon" />
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search Products or store"
+          />
+        </div>
+
         <div className="icon_container">
           <div className="cart-icon" onClick={() => navigate("/cart")}>
             <StyledBadge
@@ -40,7 +39,10 @@ const Navbar = () => {
               <ShoppingCartIcon sx={{ color: "white" }} id="badge-cart" />
             </StyledBadge>
           </div>
-          <MdFavoriteBorder id="favorite_icon" />
+          <MdFavoriteBorder
+            id="favorite_icon"
+            onClick={() => navigate("/wishlist")}
+          />
         </div>
       </nav>
     </>

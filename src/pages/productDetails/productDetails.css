@@ -1,0 +1,24 @@
+.product_details_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.product_details_header :nth-child(1) {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 300px) {
+  .product_details_header :nth-child(1) {
+    font-size: 3rem;
+  }
+ 
+}
+@media screen and (min-width: 301px) and (max-width: 600px) {
+  .product_details_header :nth-child(1) {
+    font-size: 3rem;
+  }
+ 
+}
+
+

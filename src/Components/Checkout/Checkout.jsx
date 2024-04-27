@@ -7,7 +7,7 @@ const Checkout = ({ calculateSubtotal }) => {
         <div className="total_price_container">
           <div className="subtotal_container">
             <span>Subtotal</span>
-            <span>${calculateSubtotal()}</span>
+            <span>${calculateSubtotal}</span>
           </div>
           <div className="delivery_container">
             <span>Delivery</span>
@@ -15,7 +15,7 @@ const Checkout = ({ calculateSubtotal }) => {
           </div>
           <div className="total">
             <span>Total</span>
-            <span>${calculateSubtotal() + 2}</span>
+            <span>${calculateSubtotal + 2}</span>
           </div>
           <button className="proceed_checkout_btn">Proceed To Checkout</button>
         </div>

@@ -18,6 +18,9 @@
     border-radius: 20px;
     box-shadow: 0 0 5px lightgray;
   }
+  .product_img_container img {
+    cursor: pointer;
+  }
   .product_card_info {
     display: flex;
     justify-content: space-between;

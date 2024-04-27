@@ -1,7 +1,7 @@
 import Navbar from "./../../Components/Navbar/Navbar";
-import ProductCard from "./../../Cards/ProductCard";
 import Loading from "./../../Components/Skeleton/Skeleton";
 import { useCart } from "../../Hooks/useCart";
+import ProductCard from "./../../Cards/ProductCard/ProductCard";
 const Home = () => {
   const { isLoading } = useCart();
   return (

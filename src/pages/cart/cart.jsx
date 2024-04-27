@@ -8,7 +8,7 @@ import { MdDelete } from "react-icons/md";
 
 const Cart = () => {
   const [productQuantities, setProductQuantities] = useState({});
-  const { isCart, removeProduct } = useCart();
+  const { isCart, removeCartProduct } = useCart();
   const navigate = useNavigate();
 
   const handleIncreaseQuantity = (productId) => {
@@ -50,7 +50,7 @@ const Cart = () => {
       <div>
         {isCart &&
           isCart?.map((product) => {
-            const productId = product.id;
+            const productId = product?.id;
             const quantity = productQuantities[productId] || 1;
             return (
               <div key={product?.id}>
@@ -71,6 +71,10 @@ const Cart = () => {
                       <button
                         className="decrease_btn"
                         onClick={() => handleDecreaseQuantity(product?.id)}
+                        disabled={quantity === 1}
+                        style={{
+                          cursor: quantity === 1 ? "not-allowed" : "pointer",
+                        }}
                       >
                         -
                       </button>
@@ -84,7 +88,7 @@ const Cart = () => {
                     </div>
                     <MdDelete
                       className="delete_icon"
-                      onClick={() => removeProduct(product?.id)}
+                      onClick={() => removeCartProduct(product?.id)}
                     />
                   </div>
                 </div>
@@ -94,7 +98,7 @@ const Cart = () => {
           })}
 
         {isCart.length > 0 && (
-          <Checkout calculateSubtotal={calculateSubtotal} />
+          <Checkout calculateSubtotal={calculateSubtotal()} />
         )}
       </div>
     </>

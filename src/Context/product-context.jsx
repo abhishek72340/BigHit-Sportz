@@ -7,6 +7,7 @@ export const CartProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [isCart, setIsCart] = useState([]);
+  const [isWishlist, setIsWishlist] = useState([]);
   const [search, setSearch] = useState("");
 
   const getProduct = async () => {
@@ -20,15 +21,30 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const addToCart = (id) => {
-    const productToAdd =
+    const productToAddCart =
       products && products.find((product) => product.id === id);
-    if (productToAdd) {
-      setIsCart((prevCart) => [...prevCart, productToAdd]);
+    if (productToAddCart) {
+      setIsCart((prevCart) => [...prevCart, productToAddCart]);
       toast.success("add to cart successfully");
     }
   };
 
-  const removeProduct = (id) => {
+  const addToWishlist = (id) => {
+    const productToAddWishlist =
+      products && products.find((product) => product.id === id);
+    if (productToAddWishlist) {
+      setIsWishlist((prevCart) => [...prevCart, productToAddWishlist]);
+      toast.success("add to wishlist successfully");
+    }
+  };
+
+  const removeWishlistProduct = (id) => {
+    const removeFromWishlist =
+      isWishlist && isWishlist.filter((product) => product.id !== id);
+    setIsWishlist(removeFromWishlist);
+    toast.success("product removed from wishlist successfully");
+  };
+  const removeCartProduct = (id) => {
     const removeFromCart =
       isCart && isCart.filter((product) => product.id !== id);
     setIsCart(removeFromCart);
@@ -45,7 +61,10 @@ export const CartProvider = ({ children }) => {
         isCart,
         setIsCart,
         isLoading,
-        removeProduct,
+        removeCartProduct,
+        addToWishlist,
+        isWishlist,
+        removeWishlistProduct,
       }}
     >
       {children}
