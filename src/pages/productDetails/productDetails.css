@@ -8,11 +8,11 @@
   cursor: pointer;
 }
 
-.cart_badge_icon {
+.product_detail_cart_badge_icon {
   position: relative;
   cursor: pointer;
 }
-.cart_badge_icon svg {
+.product_detail_cart_badge_icon svg {
   position: absolute;
   width: 4;
   height: 4rem;
@@ -20,7 +20,7 @@
   right: -1rem;
   z-index: -1;
 }
-#cart_badge {
+#product_detail_cart_badge {
   position: absolute;
   top: -5px;
   right: -10px;
@@ -39,12 +39,12 @@
   .product_details_header :nth-child(1) {
     font-size: 3rem;
   }
-  .cart_badge_icon {
+  .product_detail_cart_badge_icon {
     position: relative;
     cursor: pointer;
-    left: 0.5%;
+       top:1.5rem
   }
-  .cart_badge_icon svg {
+  .product_detail_cart_badge_icon svg {
     position: absolute;
     width: 6.5;
     height: 6.5rem;
@@ -52,7 +52,7 @@
     right: -1.3rem;
     z-index: -1;
   }
-  #cart_badge {
+  #product_detail_cart_badge {
     position: absolute;
     top: -1.7rem;
     right: -4.5px;
@@ -67,17 +67,17 @@
     align-items: center;
   }
 }
-@media screen and (min-width: 301px) and (max-width: 600px) {
+@media screen  and (min-width=301px) and (max-width: 600px) {
   .product_details_header :nth-child(1) {
     font-size: 3rem;
   }
-  .cart_badge_icon {
+  .product_detail_cart_badge_icon {
     position: relative;
     cursor: pointer;
     left: 0.5%;
-    margin-top: -5px;
+    margin-top: 1rem;
   }
-  .cart_badge_icon svg {
+  .product_detail_cart_badge_icon svg {
     position: absolute;
     width: 6;
     height: 6rem;
@@ -85,7 +85,7 @@
     right: -1.3rem;
     z-index: -1;
   }
-  #cart_badge {
+  #product_detail_cart_badge {
     position: absolute;
     top: -1.2rem;
     right: -6px;

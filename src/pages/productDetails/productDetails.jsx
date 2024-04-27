@@ -38,8 +38,13 @@ const ProductDetails = () => {
       <div className="product_details_header">
         <IoChevronBackCircleSharp onClick={() => navigate("/")} />
 
-        <div className="cart_badge_icon" onClick={() => navigate("/cart")}>
-          <div id="cart_badge">{isCart.length > 0 ? isCart.length : "0"}</div>
+        <div
+          className="product_detail_cart_badge_icon"
+          onClick={() => navigate("/cart")}
+        >
+          <div id="product_detail_cart_badge">
+            {isCart.length > 0 ? isCart.length : "0"}
+          </div>
           <svg
             viewBox="0 0 37 57"
             fill="none"

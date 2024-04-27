@@ -31,6 +31,10 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+ 
+}
+.cart_product_img_name_container img{
+  cursor:pointer;
 }
 .cart_product_img_name_container img {
   width: 25%;
@@ -76,14 +80,16 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    margin-left: 20%;
   }
   .cart_product_img_name_container img {
-    width: 40%;
+    width: 30%;
   }
 }
 @media screen and (min-width: 401px) and (max-width: 600px) {
   html {
     font-size: 12px;
+  }
+  .cart_product_img_name_container img {
+    width: 30%;
   }
 }

@@ -46,6 +46,7 @@ function Carousel(props) {
           alignItems: "center",
           height: 5,
           backgroundColor: "background.default",
+          position: "relative",
         }}
       >
         <div
@@ -53,14 +54,15 @@ function Carousel(props) {
             fontSize: "1.5rem",
             backgroundColor: "white",
             borderRadius: "50%",
-            height: "2rem",
-            width: "2rem",
+            height: "3rem",
+            width: "3rem",
             zIndex: 1,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginLeft: "-8px",
-            marginTop: "8px",
+            position: "absolute",
+            top: "-5px",
+            right: "-5px",
           }}
         >
           {isWishlist &&

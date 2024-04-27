@@ -60,6 +60,7 @@ const Cart = () => {
                       src={product?.thumbnail}
                       alt="cart-img"
                       loading="lazy"
+                      onClick={() => navigate(`/products/${product?.id}`)}
                     />
                     <div className="cart_product_info">
                       <span>{product?.title}</span>
