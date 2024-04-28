@@ -7,7 +7,7 @@
 To run this project locally, follow these steps:
 
 1. **Clone the repository**:<br/>
-<code>git clone <repository-url></code>
+<code>git clone `[repository-url]`</code>
    <br/>
 
 2. **Navigate to the project directory**:<br/>
