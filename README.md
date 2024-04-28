@@ -1,6 +1,6 @@
 # BigHit Sportaz
 
-****This project is with Vite***
+****This project is React.JS with Vite***
 
 ## Getting Started
 
